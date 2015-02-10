@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version
+VAGRANTFILE_API_VERSION = "2"
+
+# Configure Vagrant
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+    # Box
+    config.vm.box = 'ubuntu/trusty64'
+
+    # Network config
+    config.vm.network :private_network, ip: "192.168.50.4"
+
+    # Host
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+    config.hostmanager.aliases = ['timecop.com']
+    config.vm.provision :hostmanager
+
+    # Workspace
+    config.vm.synced_folder "..", "/srv/workspace"
+
+    # Provision
+    config.vm.provision :shell, path: "provision.sh"
+
+end
