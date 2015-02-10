@@ -1,0 +1,7 @@
+*.log
+/node_modules
+/public/bower_components
+/vendor
+/vagrant/.vagrant
+/vagrant/logs/provision.log
+/vagrant/logs/apache2/*.log

@@ -40,7 +40,9 @@ a2enmod php5
 a2enmod rewrite
 a2ensite timecop.com.conf
 a2dissite 000-default.conf
-service apache2 reload
+service apache2 stop
+service apache2 start
+update-rc.d -f apache2 enable
 
 ##################################
 # PostgreSQL
