@@ -5,3 +5,5 @@
 /vagrant/.vagrant
 /vagrant/logs/provision.log
 /vagrant/logs/apache2/*.log
+
+composer.lock
