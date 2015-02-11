@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Redirect STDERR to STDOUT and append both to log file
+echo 'Diverting output to logs/provision.log'
+>| /srv/workspace/vagrant/logs/provision.log
+exec 1>> /srv/workspace/vagrant/logs/provision.log 2>&1
+
 ##################################
 # Box Update
 ##################################
