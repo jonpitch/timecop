@@ -1,7 +1,25 @@
-*.log
-/node_modules
-/public/bower_components
-/vendor
-/vagrant/.vagrant
-/vagrant/logs/provision.log
-/vagrant/logs/apache2/*.log
+## Server ignore
+/api/vendor
+
+## VM ignore
+/vm/logs/apache2/*.log
+/vm/logs/*.log
+/vm/.vagrant
+
+## Web Ignore
+
+# compiled output
+/web/dist
+/web/tmp
+
+# dependencies
+/web/node_modules
+/web/bower_components
+
+# misc
+/web/.sass-cache
+/web/connect.lock
+/web/coverage/*
+/web/libpeerconnection.log
+/web/npm-debug.log
+/web/testem.log
