@@ -2,7 +2,7 @@
 They killed his wife ten years ago. There's still time to save her. Murder is forever... until now.
 
 # About
-A better time tracking application.
+Bootstrap an Apache/PostgreSQL/ZF2/Ember-CLI application using Vagrant.
 
 # Getting Started
 * Install Virtualbox (4.3.10+) and Vagrant
